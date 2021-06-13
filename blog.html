@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html">Saudi Aramco</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active nav-item mx-4">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container mt-4">
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+              <h1 class="display-4 font-italic">Welcome to the Saudi Aramco </h1>
+              <p class="lead my-3"></p>We use multidisciplinary methods to manage carbon and reduce emissions 
+            </div>
+          </div>
+          
+          <div class="container px-0">
+            <div class="card">
+                <div class="card-body">
+                <h4>Make a blog post</h4>
+                <div class="form-group">
+                    <label for="titleInput">Title</label>
+                    <input type="text" class="form-control" id="titleInput" placeholder="Enter a Title">
+                </div>
+                <div id="titleErr" class="alert alert-danger" style="display:none" role="alert">Please add a title to your post</div>
+                
+                <div class="form-group">
+                    <label for="textInput">Text</label>
+                    <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text"></textarea>
+                </div>
+                <div id="textErr" class="alert alert-danger" style="display:none" role="alert">Please add some text to your post</div>
+                <button id="blogSubmit" onclick="blogSubmit()" class="btn btn-lg btn-primary">Submit</button>
+                </div>
+            </div>
+
+            <br>
+            <div id="blogPosts">
+            <br>
+
+
+
+            <div class="singlePost">
+              <br>
+              <div class="card">
+              <div class="card-body">
+                <div class="row title-row">
+                  <div class="col-4"><h1 class="blogTitle">Alumni and alumni 3</h1></div>
+                  <div class="col-4"></div>
+                  <div class="col-2"></div>
+                  <div class="col-2"><button onclick="blogEditToggle(this)" class="btn btn-sm btn-info m-1">Edit</button> <button onclick="blogDelete(this)" class="btn btn-sm btn-danger m-1">Delete</button></div>
+                </div>
+              
+              <i class="text-muted"></i><br/><br/>
+              <p class="blogText"> Fresh Graduate Candidates
+
+Applicants with less than three years of experience fall under the Fresh Graduate category, and the company goes to great lengths to ensure that our newly graduated employees receive the opportunities and support they need to acquire the necessary new skills and capabilities.  .</p>
+  
+              
+  
+  
+                <div class="editForm" style="display:none">
+                <h4>Edit this blog post</h4>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Enter a Title" value="${Title}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Text</label>
+                    <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text">${Text}</textarea>
+                </div>
+  
+                <button onclick="blogEdit(this)" class="btn btn-lg btn-primary">Submit</button>
+              </div>
+              </div>    
+              </div>
+              </div>
+
+
+            <div class="singlePost">
+            <br>
+            <div class="card">
+            <div class="card-body">
+              <div class="row title-row">
+                <div class="col-4"><h1 class="blogTitle">retail fuel sales</h1></div>
+                <div class="col-4"></div>
+                <div class="col-2"></div>
+                <div class="col-2"><button onclick="blogEditToggle(this)" class="btn btn-sm btn-info m-1">Edit</button> <button onclick="blogDelete(this)" class="btn btn-sm btn-danger m-1">Delete</button></div>
+              </div>
+            
+            <i class="text-muted"></i><br/><br/>
+            <p class="blogText"> Saudi Aramco has developed a fuel retail strategy, focusing primarily on strengthening its presence in the Kingdom, in furtherance of its long-term goal of becoming one of the largest retail fuel companies in the world. Saudi Aramco's strategy in this regard is to provide a new line of automotive services and branded finished lubricants to consumers, as part of the company's commitment to diversify its portfolio in the downstream sector. .</p>
+
+            
+
+
+              <div class="editForm" style="display:none">
+              <h4>Edit this blog post</h4>
+              <div class="form-group">
+                  <label>Title</label>
+                  <input type="text" class="form-control" placeholder="Enter a Title" value="${Title}">
+              </div>
+              
+              <div class="form-group">
+                  <label>Text</label>
+                  <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text">${Text}</textarea>
+              </div>
+
+              <button onclick="blogEdit(this)" class="btn btn-lg btn-primary">Submit</button>
+            </div>
+            </div>    
+            </div>
+            </div>
+
+            <div class="singlePost">
+              <br>
+              <div class="card">
+              <div class="card-body">
+                <div class="row title-row">
+                  <div class="col-4"><h1 class="blogTitle">Jobs</h1></div>
+                  <div class="col-4"></div>
+                  <div class="col-2"></div>
+                  <div class="col-2"><button onclick="blogEditToggle(this)" class="btn btn-sm btn-info m-1">Edit</button> <button onclick="blogDelete(this)" class="btn btn-sm btn-danger m-1">Delete</button></div>
+                </div>
+              
+              <i class="text-muted"></i><br/><br/>
+              <p class="blogText"> We are in Aramco
+
+We attract high-performing employees with rewarding and challenging career opportunities, and by giving them the opportunity to make positive change through the work they do. The company also gives its employees the opportunity to do the work they have always dreamed of, and provides them with the necessary support to achieve greater achievements than they imagined..</p>
+  
+              
+  
+  
+                <div class="editForm" style="display:none">
+                <h4>Edit this blog post</h4>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Enter a Title" value="${Title}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Text</label>
+                    <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text">${Text}</textarea>
+                </div>
+  
+                <button onclick="blogEdit(this)" class="btn btn-lg btn-primary">Submit</button>
+              </div>
+              </div>    
+              </div>
+              </div>
+
+            </div>
+            
+          </div>
+          <br/><br/><br/><br/>
+      </div>
+
+
+
+
+    <script src="./blog.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
